@@ -47,7 +47,7 @@ defmodule TodosApi.MixProject do
       {:plug_cowboy, "~> 2.5"},
       {:bcrypt_elixir, "~> 2.3"},
       {:ex_doc, "~> 0.24", only: :dev, runtime: false},
-      {:cors_plug, "~> 2.0"}
+      {:corsica, "~> 1.1"}
     ]
   end
 
