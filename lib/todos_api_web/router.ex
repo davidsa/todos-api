@@ -4,8 +4,12 @@ defmodule TodosApiWeb.Router do
   pipeline :api do
     plug :accepts, ["json"]
     plug :fetch_session, http_only: true
-    plug Corsica, origins: "*", allow_headers: :all
     plug TodosApiWeb.Plugs.SetUser
+    plug Corsica,
+      origins: "*",
+      allow_headers: :all,
+      allow_credentials: true,
+      log: [rejected: :error, invalid: :warn, accepted: :debug]
   end
 
   scope "/api", TodosApiWeb do
