@@ -45,7 +45,9 @@ defmodule TodosApi.MixProject do
       {:gettext, "~> 0.18"},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
-      {:bcrypt_elixir, "~> 2.3"}
+      {:bcrypt_elixir, "~> 2.3"},
+      {:ex_doc, "~> 0.24", only: :dev, runtime: false},
+      {:cors_plug, "~> 2.0"}
     ]
   end
 
