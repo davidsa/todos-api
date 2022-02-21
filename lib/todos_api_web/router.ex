@@ -2,9 +2,9 @@ defmodule TodosApiWeb.Router do
   use TodosApiWeb, :router
 
   pipeline :api do
-    plug Corsica, max_age: 600, origins: "*"
     plug :accepts, ["json"]
     plug :fetch_session, http_only: true
+    plug Corsica, origins: "*"
     plug TodosApiWeb.Plugs.SetUser
   end
 
