@@ -2,7 +2,6 @@ defmodule TodosApiWeb.Router do
   use TodosApiWeb, :router
   
   pipeline :api do
-    plug CORSPlug
     plug :accepts, ["json"]
     plug :fetch_session, http_only: true
     plug TodosApiWeb.Plugs.SetUser
