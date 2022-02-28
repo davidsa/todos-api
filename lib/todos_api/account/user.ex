@@ -1,6 +1,7 @@
 defmodule TodosApi.Account.User do
   use Ecto.Schema
   import Ecto.Changeset
+  import EctoCommons
 
   schema "users" do
     field :email, :string

@@ -48,7 +48,8 @@ defmodule TodosApi.MixProject do
       {:bcrypt_elixir, "~> 2.3"},
       {:ex_doc, "~> 0.24", only: :dev, runtime: false},
       {:plug, "~> 1.0"},
-      {:corsica, "~> 1.0"}
+      {:corsica, "~> 1.0"},
+      {:ecto_commons, "~> 0.3.3"}
     ]
   end
 
