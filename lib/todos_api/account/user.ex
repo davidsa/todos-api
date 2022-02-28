@@ -1,7 +1,6 @@
 defmodule TodosApi.Account.User do
   use Ecto.Schema
   import Ecto.Changeset
-  import EctoCommons
 
   schema "users" do
     field :email, :string
@@ -19,7 +18,7 @@ defmodule TodosApi.Account.User do
     user
     |> cast(attrs, [:name, :lastname, :email, :password])
     |> validate_required([:name, :lastname, :email, :password])
-    |> validate_email(:email)
+    |> EctoCommons.validate_email(:email)
     |> unique_constraint(:email)
     |> encrypt_and_put_password()
   end
