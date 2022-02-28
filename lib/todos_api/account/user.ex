@@ -18,6 +18,7 @@ defmodule TodosApi.Account.User do
     user
     |> cast(attrs, [:name, :lastname, :email, :password])
     |> validate_required([:name, :lastname, :email, :password])
+    |> validate_email(:email)
     |> unique_constraint(:email)
     |> encrypt_and_put_password()
   end
