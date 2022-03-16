@@ -25,6 +25,7 @@ defmodule TodosApiWeb.UserController do
       {:error, reason} ->
         IO.inspect(reason)
         conn
+        |> put_status(:forbidden)
         |> json(%{error: "Something went wrong, please try again"})
     end
   end
