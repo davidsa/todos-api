@@ -8,7 +8,8 @@ defmodule TodosApiWeb.Endpoint do
     store: :cookie,
     key: "_todos_api_key",
     signing_salt: "tfBLbu24",
-    same_site: "strict",
+    same_site: nil,
+    secure: false,
     domain: "localhost"
   ]
 
