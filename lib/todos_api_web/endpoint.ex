@@ -10,7 +10,7 @@ defmodule TodosApiWeb.Endpoint do
     signing_salt: "tfBLbu24",
     same_site: nil,
     secure: false,
-    domain: "localhost"
+    domain: nil
   ]
 
   socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]
