@@ -8,7 +8,8 @@ defmodule TodosApiWeb.Endpoint do
     store: :cookie,
     key: "_todos_api_key",
     signing_salt: "tfBLbu24",
-    extra: "SameSite=Strict"
+    same_site: "strict",
+    domain: nil
   ]
 
   socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]
